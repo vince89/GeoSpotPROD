@@ -1,0 +1,54 @@
+<header class="container-fluid header3">	
+	<div class="row-fluid">
+		<div class="headTitle  pull-left">
+			<img src = 'images/gtext.png' />
+		</div>
+		<div class="cityTitle  pull-right">
+			<div  class="dropdown" dropdown on-toggle="toggled(open)">
+	    		<div id="currentCity" class='blueDotted ' dropdown-toggle>
+	    			<span> 
+	    				{{city|uppercase}}  <span class="caret"></span>
+	    			</span>
+	    		</div>    
+	      		<ul class="dropdown-menu cityDrop">
+	        		<li ng-repeat="c in cities">
+	    				<div >
+	    					<span  class='blueDotted'  ng-click="changeCity(c)">{{c|uppercase}}</span>
+	    				</div>
+	    			</li>
+	    		</ul>
+			</div>			
+		</div>
+
+		<div  class='headerG text-center'>
+			<img src="images/gicon.png"/>
+			<span>
+				<input type='text' placeholder='I am looking for...' />
+				<span class='searchBtn '>
+					<a href='#'>SEARCH</a>
+				</span>				
+			</span>
+    		<span class='searchDist blueDotted ' dropdown-toggle>
+    			<span> 
+    				&lt; {{searchDistance}} &nbsp;KM <i class="fa fa-location-arrow faRed"></i></span>
+    			</span>
+    		</span>    
+      		<ul class="dropdown-menu ">
+        		<li ng-repeat="d in searchDistances">
+    				<div >
+    					<span  class=' searchDist blueDotted'  ng-click="changeDist(d)">&lt;&nbsp; {{d}} &nbsp;KM<i class="fa fa-location-arrow faRed"></i></span>
+    				</div>
+    			</li>
+    		</ul>
+			<span class="radioOptions">
+				<span><input type="radio" ng-model="searchType" value="1"> <label> Product Find </label></span>
+				<span><input type="radio" ng-model="searchType" value="2"> <label>  Service Find</label></span>
+				<span><input type="radio" ng-model="searchType" value="3"> <label> Store Find</label></span>
+				<span><input type="radio" ng-model="searchType" value="4"> <label>  Food</label></span>
+			</span>
+		</div>
+		<div class=' '>
+		</div>
+
+	</div>	
+</header>

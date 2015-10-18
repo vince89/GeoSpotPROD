@@ -1,0 +1,53 @@
+
+<div class='container-fluid searchBody'>
+	<div class='row-fluid text-center'>
+		<div class='searchResultsTitle pull-left'>
+			Showing <span class="blueBind" ng-bind='sr.totalCount'> </span>  Store results ~&lt; {{sr.searchDistance}} KM for <span class="blueBind" ng-bind='sr.searchTerm'> </span>
+		</div>
+	</div>
+	<div class='row-fluid text-center'>
+		<div class=' pull-left'>
+			Sort by 
+    		<span class=' blueDotted dropdown'  dropdown on-toggle="toggled(open)">
+    			<span   class='blueDotted dropdown-toggle' dropdown-toggle> 
+    				 {{sr.sortBy}}  <i class="fa fa-chevron-down faBlue"></i>
+    			</span>
+	      		<ul class="dropdown-menu">
+	        		<li>
+	    				<div>
+	    					<span  class=' blueDotted'  ng-click="sr.changeSort('Relevence')">Relevence</span>
+	    				</div>
+	    			</li>	    			
+	        		<li>
+	    				<div >
+	    					<span  class=' blueDotted'  ng-click="sr.changeSort('Distance')">Distance</span>
+	    				</div>
+	    			</li>
+	    		</ul>
+    		</span>   
+		</div>
+	</div>
+	<div class='row-fluid text-center searchPaginationTop'>
+			<pre>Page: <span data-ng-bind="sr.currentPage"></span> / <span data-ng-bind="sr.numPages"></span></pre>
+		    <pagination ng-change="pageChanged()" total-items="sr.totalCount" items-per-page="sr.itemsPerPage" ng-model="sr.currentPage" max-size="5" class="pagination-sm" boundary-links="true" num-pages="sr.numPages"></pagination>			    
+		
+	</div>
+	<div  class='row-fluid text-center searchResults' ng-repeat = "sResult in sr.bizInfos">
+		<div class="  pull-left">
+			<div class="noOfItems" ><span ng-bind="sResult.noOfItems"></span></div>
+			<div class="shopName" ng-bind="sResult.shopName"></div>
+			<div class="address" ng-bind="sResult.address"></div>
+			<div class="phoneNos" ng-bind="sResult.phoneNos"></div>
+		</div>
+		<div class="   pull-right">
+			<div class="routeImage" ><img src="images/groute.png" /></div>
+			<div class="distanceFromYou"><label><span ng-bind="sResult.distanceFromYou"> </span> &nbsp;KM</label></div>
+			<div class="findRoute" >FIND ROUTE</div>
+		</div>
+	</div>
+	<div class='row-fluid text-center'>
+		<div class='searchPaginationBottom'>
+			<pagination ng-change="pageChanged()" total-items="sr.totalCount" items-per-page="sr.itemsPerPage" ng-model="sr.currentPage" max-size="5" class="pagination-sm" boundary-links="true" num-pages="sr.numPages"></pagination>
+		</div>
+	</div>
+</div>	

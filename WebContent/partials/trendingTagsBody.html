@@ -1,0 +1,19 @@
+
+<div class='container-fluid homepageTop homepageBody'>
+	<div class='row-fluid text-center'>
+		<div class="homepage container-fluid">
+			<div class="row-fluid">
+				<div class="col-md-9">
+					<div class="listItem" ng-repeat="tag in trendingTags">
+						<span># {{tag.id}} - {{tag.value}}</span><br />
+					</div>
+				</div>
+				<div class="col-md-3">
+					<input type="text" size=30 class="inputLocation" /> <br /> <br />
+					<div class="mapArea"></div>
+					<button ng-click="refresh()">Refresh</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

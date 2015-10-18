@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Geospot</title>
+<link href="css/normalize.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap-responsive.min.css" rel="stylesheet"
+	type="text/css" />
+<link href="css/footer.css" rel="stylesheet" type="text/css" />
+<link href="css/comingSoon.css" rel="stylesheet" type="text/css" />
+
+<script src="lib/angular.min.js"></script>
+<script src="lib/ui-bootstrap.min.js"></script>
+<script src="lib/ui-bootstrap-tpls.min.js"></script>
+<script src="lib/jquery-2.1.1.min.js"></script>
+<script src="lib/smart-table.min.js"></script>
+<script>
+	var app = angular.module("MyApp", []);
+	app.controller("SearchCtrl", function($scope, $http) {
+		$scope.search = function() {
+			var searchTerm = $("#searchTerm").val();
+			window.location = "search.html?searchTerm=" + searchTerm;
+		};
+	}
+	);
+</script>
+</head>
+<body ng-app="MyApp">
+	<div ng-include=" 'partials/header.html' "></div>
+	<div ng-controller="SearchCtrl">
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="comingSoon container-fluid">
+					<div class="row-fluid">
+						<div class="comingSoonImg">
+							<img src="images/gicon.png" />
+							<form>
+								<span class='mySpan31'> <input type='text' type="text"
+									name="searchTerm" id="searchTerm"
+									placeholder='I am looking for...' /> <span class='searchBtn'
+									ng-click="search()"> <a href='#'>SEARCH</a>
+								</span>
+								</span>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div ng-include=" 'partials/footer.html' " /></div>
+</body>
+</html>

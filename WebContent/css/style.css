@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+
+.listItem{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid;
+	text-align:left;
+}
+
+.mapArea {
+	width: 200px;
+    height: 200px;
+}
+
+.inputMapArea {
+	width: 200px;
+    height: 200px;
+}

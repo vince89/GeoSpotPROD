@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Geospot </title>		
+		<!-- need to change these to local -->
+		<link href="css/normalize.css" rel="stylesheet" type="text/css" />
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/footer.css"/>
+		<link rel="stylesheet" href="css/search.css"/>
+	</head>
+	<body ng-app="theModule">
+		<div ng-controller="searchCtrl">
+			<div class="container-fluid">
+				<div class="row-fluid"> 
+					<div ng-include=" 'partials/header3.html' "></div>
+					<div ng-include=" 'partials/searchStoreBody.html' "></div>
+					
+					<div ng-include=" 'partials/footer.html' "></div>
+			</div> 
+
+
+		<script src="lib/angular.min.js"></script>
+		<script src="lib/jquery-2.1.1.min.js"></script>
+		<script src="lib/bootstrap.min.js"></script>
+		<script src="lib/ui-bootstrap-tpls-0.12.0.min.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/search.js"></script>
+	</body>
+</html>

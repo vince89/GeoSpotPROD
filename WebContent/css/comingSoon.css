@@ -1,0 +1,16 @@
+ .comingSoonImg img{
+   width: 92px;
+   margin:  50px;
+   margin-top:8%;
+ }
+
+.comingSoon{
+  font-size: 17px;
+  font-family: bBold;
+  text-align: center;
+  height: 65vh;
+}
+
+.comingSoon span{
+	margin-right:35px;
+}

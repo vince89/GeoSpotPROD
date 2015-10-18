@@ -1,0 +1,37 @@
+
+<div class='container-fluid homepageTop homepageBody'>
+	<div class='row-fluid text-center'>
+		<div class="homepage container-fluid">
+			<div class="row-fluid">
+				<div class="col-md-3">
+					Filter Hash Tag : <input type="text"
+						ng-model="params.userInfo.topicNow"> <input type="text"
+						size=30 class="inputLocation" /> <br /> <br />
+					<div class="inputMapArea"></div>
+					<button ng-click="refresh()">Refresh</button>
+				</div>
+				<div class="col-md-9">
+					<div ng-repeat="feed in feedList">
+						<div class="listItem clearfix">
+							<div class="col-md-9 ">
+								<span>{{feed.textContent}}</span><br /> <span> Source
+									Device: </span><span>{{feed.sourceDevice}}</span><br /> <span>
+									Posted Date: </span><span>{{feed.dateOfPost | date:'yyyy-MM-dd
+									HH:mm' }}</span><br /> <span> Hash Tagged Words: </span><span>{{feed.hashTaggedWords.join(',
+									')}}</span>
+								<div ng-If="feed.linkedFiles!==null">
+									<div class="images" ng-repeat="linkedFile in feed.linkedFiles">
+										<img src="{{linkedFile}}" alt="Description" />
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="mapArea"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

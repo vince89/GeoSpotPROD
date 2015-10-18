@@ -1,0 +1,22 @@
+<div class='container-fluid searchBody'>
+	<div class='row-fluid text-center'>
+		<button type="button" ng-click="addRandomItem(row)"
+			class="btn btn-sm btn-success">
+			<i class="glyphicon glyphicon-plus"> </i> Add random item
+		</button>
+		<div ng-repeat="row in productList">
+			<div class="pull-left">
+				<div>
+					<span>{{row.productName}}</span>
+				</div>
+				<div>
+					<span>{{row.productDesc}}</span>
+				</div>
+				<button type="button" ng-click="removeItem(row)"
+					class="btn btn-sm btn-danger">
+					<i class="glyphicon glyphicon-remove-circle"> </i>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

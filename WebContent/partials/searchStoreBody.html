@@ -1,0 +1,102 @@
+
+<div class='container-fluid searchStoreBody'  ng-controller="searchStoreCtrl">
+	<div class='row-fluid text-center'>
+		<div class='searchStoreResultsTitle pull-left'>
+			 <span  ng-bind='sr.searchTerm'> </span> &gt;&nbsp;  <span ng-bind='sr.store.shopName'> </span> 
+		</div>
+	</div>
+	<div  class='row-fluid text-center shopTitleDiv3'>
+		<div class='col-md-6 col-xs-6 shopTitleDiv1'>
+			<div class="container-fluid">
+				<div class='row-fluid'>
+					<div class='pull-left shopDetails'>						
+						<div class="shopName" ng-bind="sr.store.shopName"></div>
+						<div class="address" ng-bind="sr.store.address"></div>
+						<div class="phoneNos" ng-bind="sr.store.phoneNos"></div>
+					</div>
+					<div class='pull-right shopDetailsImg'>						
+						<div class="routeImage" ><img src="images/groute.png" /></div>
+						<div class="distanceFromYou"><label><span ng-bind="sr.distanceFromYou"> </span> &nbsp;KM</label></div>
+						<div class="findRoute" >FIND ROUTE</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='col-md-6 col-xs-6 shopTitleDiv2'>
+			<div class='myDiv31'>
+				<span class='mySpan32'>
+					<input type='text' placeholder='Search {{sr.store.shopName}}...' />
+					<span class='searchBtn'>
+						<a href='#'>SEARCH</a>
+					</span>				
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class='row-fluid'>
+		<div class='col-md-8 col-xs-8 div32'>
+			<div class='row-fluid'><span  class='storeSearchItemCount' ng-bind='sr.totalCount'/>
+			</div>
+			<div class='row-fluid storeCategory'>
+
+				<div class='pull-left'><label>{{sr.category}}&nbsp;&gt;{{sr.searchTerm}}</label></div>
+
+				<div class=' pull-right'>
+					Sort by 
+		    		<span class=' blueDotted dropdown'  dropdown on-toggle="toggled(open)">
+		    			<span   class='blueDotted dropdown-toggle' dropdown-toggle> 
+		    				 {{sr.sortBy | uppercase}}  <i class="fa fa-chevron-down faBlue"></i>
+		    			</span>
+			      		<ul class="dropdown-menu ">
+			        		<li >
+			    				<div >
+			    					<span  class=' blueDotted'  ng-click="sr.changeSort('Price Low to High')">PRICE LOW TO HIGH</span>
+			    				</div>
+			    			</li>	    			
+			        		<li >
+			    				<div >
+			    					<span  class=' blueDotted'  ng-click="sr.changeSort('RELEVENCE')">RELEVENCE</span>
+			    				</div>
+			    			</li>
+			    		</ul>
+		    		</span>   
+				</div>
+			</div>
+
+
+			<div  class='row-fluid text-center storeItems31' ng-repeat = "s3 in sr.shopItemResults">
+				<div class="pull-left imgDiv">
+					<img ng-src="{{s3.imageLocation}}"/>
+				</div>
+				<div class="pull-left">
+					<div class="title" >
+						<span ng-bind="s3.name"></span>
+						<span class='price'>INR&nbsp;{{s3.price}}</span>
+					</div>
+					<div class="itemDesc" ng-bind="s3.desc"></div>
+				</div>
+				<div class="   pull-right">
+					<span class="available" ng-bind="s3.available ? 'AVAILABLE': 'NOT AVAILABLE' "></span>
+				</div>
+			</div>
+
+
+
+			<div class='row-fluid text-center'>
+				<div class='searchPaginationBottom'>
+					<pagination ng-change="pageChanged()" total-items="sr.totalCount" items-per-page="sr.itemsPerPage" ng-model="sr.currentPage" max-size="sr.itemsPerPage" class="pagination-sm" boundary-links="true" num-pages="sr.numPages"></pagination>
+				</div>
+			</div>
+		</div>
+		<div class='col-md-4 col-xs-4 div33 container-fluid'>
+			<div class='row-fluid otherCategories' >OTHER CATEGORY OF PRODUCTS AVAILABLE IN THIS STORE</div>
+			<div class='row-fluid' class='divSim'  ng-repeat = "sr2 in sr.similarResults">
+				<div class='pull-left div34'>
+					<span class='blue' ng-bind='sr2.name' /> 
+				</div>
+				<div class='pull-right div35' >
+					<span class='blue' ng-bind='sr2.noOfItems' ></span> <span>ITEMS</span>
+				</div>
+			</div>
+		</div>
+	</div>

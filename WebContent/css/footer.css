@@ -1,0 +1,247 @@
+
+@font-face {
+    font-family: bBold;
+    src: url(../fonts/Brandon_bld.otf);
+}
+
+
+@font-face {
+    font-family: bMed;
+    src: url(../fonts/Brandon_med.otf);
+}
+
+
+@font-face {
+    font-family: bReg;
+    src: url(../fonts/Brandon_reg.otf);
+}
+
+body{
+  font-family: bReg;
+}
+
+.tmpModal31{
+  display:none;
+}
+
+.container, .container-fluid{
+  max-width: 978px;
+}
+
+.midoCentre{
+    display: flex;
+    align-items: center;	
+  	justify-content: center;
+}
+
+.cityDrop{
+  min-width:100px;
+}
+
+.faRed{
+  color: red;
+}
+
+.faBlue{
+  color:  rgb(24,112,160);
+}
+
+
+.blueDotted{
+  margin-left : auto;
+  margin-right:auto;
+  color:  rgb(24,112,160);
+  border-bottom: 1px dotted;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: -moz-use-text-color; 
+}
+
+.headTitle{
+  font-size: 25px;
+}
+
+#currentCity{
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-right: 50px;
+  margin-top: 5px;
+  
+}
+
+hr{
+  margin-top: 2px;
+  margin-bottom: 10px;
+  border-color: rgba(101, 101, 101, 0.34);
+}
+
+ 
+ /* for Footer */
+ .footer{
+  padding-top: 15px;
+  margin-top:15px;
+ }
+
+@media only screen and (min-height:640px) and (min-width:1000px){	
+  .footer {
+  position: relative;
+  bottom:0px;
+  width:100%;
+  }
+}  
+ 
+.footer-ul{
+   list-style: outside none; 
+  padding: 0px;
+ }
+
+.geoSpotFooter{
+  padding-left: 0px;
+}
+ 
+.footerTitle{
+  font-size: 15px;
+}
+
+.footerBody{
+  font-size: 15px;
+  color: rgb(70%, 70%, 70%);
+}
+
+.footer-ul a{
+  font-size: 15px;
+  color:  rgb(77,212,252);
+}
+
+.copyrightInfo{
+  font-size: 10px;
+  padding: 20px 0px;
+  color: rgb(70%, 70%, 70%);
+  text-align: center;
+}
+
+ /* For footer end*/
+
+ /*  footer modal*/
+
+.modal-header{
+ border-bottom-color: transparent; 
+}
+
+  .modal-dialog{
+  width:700px;
+  }
+  
+.modal-broken .close span{
+  font-size:40pt;
+  opacity: 100;
+  color: #000;
+  
+}
+
+#myModal {
+  text-align: center;
+}
+
+#myModal:before {
+  display: inline-block;
+  vertical-align: middle;
+  content: " ";
+  height: 100%;
+}
+
+#myModal .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+
+.alertDownTitle{
+  font-family: bMed;
+  text-align: center;
+  color: rgb(30,125,205);
+  font-size: 31px;
+  padding:  15px 0px;
+}
+
+.alertDownText{
+  font-family: bMed;
+  text-align: center;
+  color: rgb(70%, 70%, 70%);
+  font-size: 17px;
+  padding-bottom: 15px;
+}
+
+
+ /*  footer modal*/
+
+/* for header3*/
+
+
+.header3{
+}
+
+.header3{
+  font-size: 13px;
+}
+
+.header3 .mySpan31{
+  margin-left: 10px;
+  margin-right: 2px;
+}
+
+.header3 .mySpan31 .searchBtn{
+  position: relative;
+  left: -7px;
+  height:30px;
+}
+
+
+.header3 .searchBtn a{
+  color:#fff;
+  text-decoration: none;
+  padding: 5px;
+  background-color:#0670A0;
+  font-size: 13px;
+  
+}
+.header3 .headerG img{
+  width:30px;
+}
+
+.header3  input[type='text']{
+  line-height: 30px;  
+  height : 30px;
+  width: 120px;
+  margin-right: 0px;
+  font-size: 13px;
+}
+
+.header3 .radioOptions{
+  margin-left: 20px;
+}
+
+.header3 .radioOptions label{
+  font-weight: normal;
+  margin-right: 8px;
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+.header3 .searchDist ul{
+  min-width: 90px;
+}
+
+.header3 .searchDist li{
+  margin-top: 6px;
+}
+
+
+
+/* for header3*/
+
+.modalGetAddress input[type='text']{
+  width: 100%;
+  margin:20px 0;
+}

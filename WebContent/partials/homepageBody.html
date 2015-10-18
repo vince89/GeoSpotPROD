@@ -1,0 +1,65 @@
+
+					<div class='container-fluid homepageTop homepageBody'>
+						<div class='row-fluid text-center'>
+							<div class="homepage container-fluid">								
+								<div class="row-fluid">
+									<div class="searchArea">	
+										<div class='container-fluid'>
+											<div class="row-fluid searchInAr">
+												<div class="searchIcon span1">	
+													<img src="images/gicon.png"/> 
+												</div>
+												<div class="span11">
+													<div class='container-fluid'>
+														<div class="row-fluid">
+															<div class = 'wid70'>													
+																<input type='text' placeholder='I am looking for...' ng-bind='searchTerm'/>
+															</div>
+															<div class = 'wid15'>		
+																<div class='searchBtn'  ng-click="search()">													
+																	<div><a href='#'>SEARCH</a>	</div>																
+																</div>													
+																<div class='searchDist dropdown midoCentre'  dropdown on-toggle="toggled(open)">
+														    		<div class='blueDotted' dropdown-toggle>
+														    			<span> 
+														    				~&lt;&nbsp; {{searchDistance}} &nbsp;KM <i class="fa fa-location-arrow faRed"></i></span>
+														    			</span>
+														    		</div>    
+														      		<ul class="dropdown-menu ">
+														        		<li ng-repeat="d in searchDistances">
+														    				<div class='searchDistDrop'>
+														    					<span  class=' blueDotted'  ng-click="changeDist(d)">~&lt;&nbsp; {{d}} &nbsp;KM<i class="fa fa-location-arrow faRed"></i></span>
+														    				</div>
+														    			</li>
+														    		</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>				
+								</div>								
+								<div class="row-fluid">
+										<div class='container-fluid'>
+											<div class="row-fluid radioOptions">
+												<span><input type="radio" ng-model="searchType" value="1"> <label> Product Find </label></span>
+												<span><input type="radio" ng-model="searchType" value="2"> <label>  Service Find</label></span>
+												<span><input type="radio" ng-model="searchType" value="3"> <label> Store Find</label></span>
+												<span><input type="radio" ng-model="searchType" value="4"> <label>  Food</label></span>
+											</div>
+											<div class="row-fluid productsCountInfo">
+												SEARCHING THROUGH 77,484 PRODUCTS ACROSS CHENNAI, BANGALORE &amp; MUMBAI.
+											</div>
+										</div>
+								</div>					
+							</div>
+						</div>
+					</div>	
+
+
+
+		
+					
+					

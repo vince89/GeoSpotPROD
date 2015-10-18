@@ -1,0 +1,15 @@
+
+
+        <div class="modal-header">
+            <h3 class="modal-title">{{errorMessage}}</h3>
+        </div>
+        <div class="modal-body">
+            <div class = 'modalGetAddress'>
+                Automatic retrival of location has failed, to identify your area, please enter your zip code or district name : 
+                <input type='text' placeholder = 'Zipcode or District Name' ng-model='zipcode' />
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">Search</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>

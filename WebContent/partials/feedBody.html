@@ -1,0 +1,21 @@
+<div class='container-fluid homepageTop homepageBody'>
+	<div class='row-fluid text-center'>
+		<div class="homepage container-fluid">	
+			<div class="row-fluid">	
+				<div class="col-md-9">						
+				 Enter your feed content
+				 	<textarea id="message" rows="5" cols="50" ng-model="feed.textContent"></textarea>
+				 </div>
+				<div class="col-md-3">
+					 <input type="text" size=30 class="inputLocation"/>
+					 	<br/>
+					 	<br/>
+					 <div class="mapArea" ></div>
+			    </div>
+			    Upload File <input class="uploadFile" type="file" id="filePicker">
+			    <button ng-click="insertFeed()">Submit Feed</button>
+			    <img id="uploadedImage" src="" height="200" alt="Image preview...">
+			 </div>
+		</div>
+	</div>
+</div>
